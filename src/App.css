@@ -1,0 +1,10 @@
+:root{
+  --lightgrey: #B9B9BF;
+}
+
+.App {
+  /* background-color: brown; */
+  display: flex;
+  height: 100vh;
+}
+
