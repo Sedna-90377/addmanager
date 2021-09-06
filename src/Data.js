@@ -1,14 +1,9 @@
-import React from 'react'
-
-
-
 export const personen = [
     {
         id: '001',
         group: 'artists',
         name: 'Bogenhaus',
         surname: 'Tim',
-        photo: 'pfad',
         address: [
             {
                 id: '1',
@@ -28,7 +23,6 @@ export const personen = [
         group: 'artists',
         name: 'Dillers',
         surname: 'Lukas',
-        photo: 'pfad',
         address: [
             {
                 id: '1',
@@ -48,7 +42,6 @@ export const personen = [
         group: 'artists',
         name: 'Eschaus',
         surname: 'Katrin',
-        photo: 'pfad',
         address: [
             {
                 id: '1',
@@ -68,7 +61,6 @@ export const personen = [
         group: 'artists',
         name: 'Schäfer',
         surname: 'Clemens',
-        photo: 'pfad',
         address: [
             {
                 id: '2',
@@ -88,7 +80,6 @@ export const personen = [
         group: 'artists',
         name: 'Rietmann',
         surname: 'Marco',
-        photo: 'pfad',
         address: [
             {
                 id: '1',
@@ -120,7 +111,6 @@ export const personen = [
         group: 'artists',
         name: 'Holtmann',
         surname: 'Simone',
-        photo: 'pfad',
         address: [
             {
                 id: '1',
@@ -140,7 +130,6 @@ export const personen = [
         group: 'artists',
         name: 'Balders',
         surname: 'Johanna',
-        photo: 'pfad',
         address: [
             {
                 id: '1',
@@ -171,7 +160,6 @@ export const personen = [
         group: 'models',
         name: 'Huber',
         surname: 'Rika',
-        photo: 'pfad',
         address: [
             {
                 id: '1',
@@ -191,7 +179,6 @@ export const personen = [
         group: 'models',
         name: 'Schirm',
         surname: 'Paula',
-        photo: 'pfad',
         address: [
             {
                 id: '3',
@@ -211,7 +198,6 @@ export const personen = [
         group: 'clients',
         name: 'Schmid',
         surname: 'Erika',
-        photo: 'pfad',
         address: [
             {
                 id: '1',
@@ -231,7 +217,6 @@ export const personen = [
         group: 'clients',
         name: 'Brause',
         surname: 'Laura',
-        photo: 'pfad',
         address: [
             {
                 id: '2',
@@ -241,6 +226,25 @@ export const personen = [
                 houseNumber: '5',
                 zip: '27435',
                 city: 'Dilp',
+                country: 'Deutschland',
+                additionalBottom: ''
+            }
+        ]
+    },
+    {
+        id: '012',
+        group: 'artists',
+        name: 'Van Den Baars',
+        surname: 'Tanja',
+        address: [
+            {
+                id: '1',
+                group: 'private',
+                additionalTop: '',
+                street: 'Tiefenstraße',
+                houseNumber: '2',
+                zip: '34256',
+                city: 'Möllenburg',
                 country: 'Deutschland',
                 additionalBottom: ''
             }

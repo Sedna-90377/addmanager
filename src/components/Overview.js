@@ -3,8 +3,7 @@ import './overview.css'
 import User from '../assets/images/User.png'
 import { FaBell } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
- 
-
+import Contacts from './Contacts';
 
 
 const Overview = () => {
@@ -36,7 +35,11 @@ const Overview = () => {
                 <div>MODELS</div>
                 <div>...</div>
             </div>
-            <div className="overview__contacts">Contacts</div>
+            <div className="overview__contacts">
+                    <Contacts />
+         
+                
+            </div>
         </div>
     )
 }

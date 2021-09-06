@@ -9,8 +9,6 @@
     align-items: center;
 }
 
-
-
 .overview__user_img{
     width: 70%;
     box-shadow: 2px 2px 12px black;
@@ -80,4 +78,30 @@ p{
     font-weight: lighter;
     font-size: small;
     color: var(--lightgrey)
+}
+
+.contacts__photo{
+    max-width: 80px;
+}
+
+.contacts__info{
+    display: flex;
+    
+    justify-content: flex-start;
+}
+
+.contacts__name{
+   
+    margin-left: 2rem;
+}
+
+.contacts__add{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--lightgrey);
 }
