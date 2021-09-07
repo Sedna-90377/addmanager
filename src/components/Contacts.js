@@ -1,11 +1,12 @@
 import React from 'react'
 import { personen } from '../Data';
+import {BsPlusCircle} from 'react-icons/bs'
 
-const Contacts = () => {
-    const contacts = personen;
+const Contacts = ({contacts}) => {
+    //const contacts = personen;
     return (
         <div>
-            {contacts.map((person, index) => {
+            {contacts?.map((person) => {
                 return(
                     <div  className="contacts">
                         <div className="contacts__info">
@@ -16,7 +17,9 @@ const Contacts = () => {
                                 <p>{`${person.address[0].zip} ${person.address[0].city}`}</p>
                             </div>
                         </div>
-                        <div className="contacts__add">+</div>
+                        <div className="contacts__add">
+                            <BsPlusCircle color="var(--lightgrey)" size={25} style={{marginTop: '1.5rem', cursor: 'pointer'}}/>
+                        </div>
                     </div>
                 )
             })}

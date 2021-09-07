@@ -1,8 +1,85 @@
-
-
-
 .addressList__container {
     background-color: aliceblue;
     width: 65%;
+}
+
+.addressList__header{
+    height: 15%;
+    background-color: #DCE6E4;
     padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.addressList__icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.addressList__title > h1{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.addressList__bottom{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    overflow-y: scroll;
+    overflow-x: auto;
+    position: relative;
+    width: 100&;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+}
+
+.list__box{
+    display: flex;
+    background-color: white;
+    margin: 1rem;
+    margin-left: 4rem;
+    border-radius: 10px;
+    justify-content: flex-start;
+    box-shadow: 2px 2px 16px rgb(128, 128, 128);
+
+}
+
+.list__photo{
+    width: 100px;
+    margin-left: -3rem;
+    padding-bottom: .6rem;
+    position: relative;
+    z-index: 200;
+}
+
+.list__name > p{
+    color: black;
+    font-size: 16px;
+}
+
+.list__adcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.list__addresses{
+    display: flex;
+    flex-direction: row;
+}
+
+.list__addresses_item{
+    margin-right: 4rem;
+    min-width: 10rem;
+}
+
+.list__addresses_item > p{
+    color: black;
 }

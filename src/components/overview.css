@@ -4,9 +4,10 @@
 }
 
 .overview__user{
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .overview__user_img{
@@ -21,11 +22,16 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin-left: -0.5rem;
+    padding-top: 2rem;
 }
 
 .overview__user_info > a{
     font-size: small;
+}
+
+.overview__user__left {
+    display: flex;
+    flex-direction: row;
 }
 
 h4{
@@ -49,7 +55,7 @@ p{
     border-bottom: solid;
     border-color: var(--lightgrey);
     border-width: thin;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .overview__search__icon{
@@ -68,10 +74,12 @@ p{
     color: var(--lightgrey)
 }
 
-
 .overview__filter{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    cursor: pointer;
 }
 
 .overview__filter > div{
@@ -86,22 +94,24 @@ p{
 
 .contacts__info{
     display: flex;
-    
     justify-content: flex-start;
 }
 
 .contacts__name{
-   
     margin-left: 2rem;
-}
-
-.contacts__add{
-    display: flex;
-    justify-content: flex-end;
 }
 
 .contacts{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--lightgrey);
+    margin-bottom: 1rem;
+}
+
+.overview__contacts{
+    height: 60%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: auto;
+    position: relative;
 }
