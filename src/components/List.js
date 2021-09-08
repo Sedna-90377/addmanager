@@ -1,13 +1,17 @@
 import React from 'react'
-import { personen } from '../Data';
 import {MdDelete} from 'react-icons/md'
 
 
-const List = () => {
-    const list = personen;
+const List = ({list}) => {
+    if(list == null){
+        console.log('listList', list)
+
+        return 'Noch keine Personen ausgewählt'
+    }
+
     return (
         <div>
-            {list.map((person) => {
+            {list?.map((person) => {
                 return(
                     <div  className="list">
                         <div className="list__box">
