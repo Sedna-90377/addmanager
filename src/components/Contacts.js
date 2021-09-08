@@ -5,13 +5,13 @@ import { PersonContext } from '../contexts/PersonContext';
 
 const Contacts = ({contacts}) => {
 
-    const {persons, addPerson} = useContext(PersonContext)
+    const {addPerson} = useContext(PersonContext)
 
     return (
             <div>
                 {contacts?.map((person) => {
                     return(
-                        <div  className="contacts">
+                        <div  className="contacts" key={person.id}>
                             <div className="contacts__info">
                                 <img src={require(`../assets/images/${person.surname}.png`).default} alt={person.name}  className="contacts__photo"/>
                             

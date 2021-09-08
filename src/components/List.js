@@ -5,13 +5,7 @@ import { PersonContext } from '../contexts/PersonContext'
 
 const List = ({list}) => {
     
-    const {persons, addPerson, removePerson, checkedPersons} = useContext(PersonContext)
-
-    // const handleClick = (person, id) => {
-    //     addPerson(person);
-    //     removePerson(id);
-    // }
-
+    const { removePerson} = useContext(PersonContext)
 
     if(list == null){
 
@@ -22,7 +16,7 @@ const List = ({list}) => {
         <div>
             {list?.map((person) => {
                 return(
-                    <div  className="list">
+                    <div className="list" key={person.id}>
                         <div className="list__box">
                             <div>
                                 <img src={require(`../assets/images/${person.surname}.png`).default} alt={person.name}  className="list__photo"/>
