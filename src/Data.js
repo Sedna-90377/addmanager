@@ -252,3 +252,18 @@ export const personen = [
     },
 ]
 
+export let checkedList = [];
+export let contactList = personen;
+
+
+export const add = (person) => {
+    checkedList.push(person);
+    console.log('checked', checkedList)
+    return checkedList;
+}
+
+export const remove = (person) => {
+    contactList.splice(contactList.indexOf(person), 1);
+    console.log('personen', contactList)
+    return contactList;
+}

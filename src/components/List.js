@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {MdDelete} from 'react-icons/md'
+import { PersonContext } from '../contexts/PersonContext'
 
 
 const List = ({list}) => {
+    
+    const {persons, addPerson, removePerson, checkedPersons} = useContext(PersonContext)
+
+    // const handleClick = (person, id) => {
+    //     addPerson(person);
+    //     removePerson(id);
+    // }
+
+
     if(list == null){
-        console.log('listList', list)
 
         return 'Noch keine Personen ausgewählt'
     }
@@ -36,7 +45,11 @@ const List = ({list}) => {
                                 </div>
                             </div>
                             <div style={{cursor: 'pointer'}}>
-                                <MdDelete color="var(--lightgrey)" size={18} style={{padding: '1rem 1rem 1rem 1rem'}}/>
+                                <MdDelete 
+                                    color="var(--lightgrey)" 
+                                    size={18} style={{padding: '1rem 1rem 1rem 1rem'}}
+                                    onClick={() => removePerson(person, person.id)}
+                                />
                             </div>
                             
                                 

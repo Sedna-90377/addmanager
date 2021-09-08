@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './overview.css'
 import User from '../assets/images/User.png'
 import { FaSearch, FaEllipsisH, FaBell } from "react-icons/fa";
 import Contacts from './Contacts';
-import { personen } from '../Data';
+import { PersonContext } from '../contexts/PersonContext';
 
 
 
 const Overview = () => {
+
+    const {persons,} = useContext(PersonContext)
     
     const [searchTerm, setSearchTerm] = useState('')
-    const [selected, setSelected] = useState(personen)
+    const [selected, setSelected] = useState(persons)
+
 
     useEffect(() => {
-        const results = personen.filter(person => 
+        const results = persons?.filter(person => 
             person.name.toLowerCase().includes(searchTerm) || 
             person.surname.toLowerCase().includes(searchTerm)
         );
@@ -22,10 +25,8 @@ const Overview = () => {
 
 
     const handleSelectedGroup = (group) => {
-        if (group === 'all'){
-            return personen;
-        }
-        let filteredPersons = personen.filter(person => person.group === group)
+        let filteredPersons = persons.filter(person => person.group === group)
+        console.log(filteredPersons)
         setSelected(filteredPersons);
     }
 
@@ -61,7 +62,7 @@ const Overview = () => {
                 />
             </div>
             <div className="overview__filter">
-                <div onClick={()=> handleSelectedGroup('all')}>ALLE</div>
+                <div onClick={()=> setSelected(persons)}>ALLE</div>
                 <div onClick={()=> handleSelectedGroup('clients')}>KUNDEN</div>
                 <div onClick={()=> handleSelectedGroup('artists')}>ARTISTS</div>
                 <div onClick={()=> handleSelectedGroup('models')}>MODELS</div>
@@ -70,7 +71,7 @@ const Overview = () => {
                 </div>
             </div>
             <div className="overview__contacts">
-                    <Contacts contacts={selected}/>
+                    <Contacts contacts={persons}/>
          
                 
             </div>

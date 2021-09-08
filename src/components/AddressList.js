@@ -3,9 +3,12 @@ import './addressList.css'
 import {FaEdit} from 'react-icons/fa'
 import {MdDelete} from 'react-icons/md'
 import List from './List'
-import { personen } from '../Data'
+import { PersonContext } from '../contexts/PersonContext'
 
 const AddressList = () => {
+    const { checkedPersons } = useContext(PersonContext)
+
+
     return (
         <div className="addressList__container">
             <div className="addressList__header">
@@ -15,17 +18,17 @@ const AddressList = () => {
                 </div>
                 <div className="addressList__icons">
                     <div>
-                        <FaEdit color='var(--lightgrey)' size={20} style={{marginBottom: '1rem'}}/>
+                        <FaEdit color='var(--lightgrey)' size={20} style={{marginBottom: '1rem', cursor: 'pointer'}}/>
                     </div>
                     <div>
-                        <MdDelete color='var(--lightgrey)' size={20}/>
+                        <MdDelete color='var(--lightgrey)' size={20} style={{cursor: 'pointer'}}/>
                     </div>
                     
                 </div>
             </div>
             <div className="addressList__bottom">
                 <div className="addressList__list">
-                    <List list={personen}/>
+                    <List list={checkedPersons}/>
                 </div>
             </div>
         </div>

@@ -1,29 +1,11 @@
-import React, { createContext, useState } from 'react'
+import React, {  useContext} from 'react'
 import {BsPlusCircle} from 'react-icons/bs'
-import List from './List';
+import { PersonContext } from '../contexts/PersonContext';
 
-// let list = [];
-// const handleClick = (person) => {
-// list.push(person)
-//     console.log('gute liste',list)
-// }
-
-// export const ListContext = createContext();
 
 const Contacts = ({contacts}) => {
 
-    // const [list, setList] = useState([])
-    // const handleClick = (person) => {
-    //     list.push(person)
-    //     setList(list)
-    //     console.log(list)
-    // }
-
-    let list = [];
-    const handleClick = (person) => {
-    list.push(person)
-        console.log('gute liste',list)
-    }
+    const {persons, addPerson} = useContext(PersonContext)
 
     return (
             <div>
@@ -43,14 +25,12 @@ const Contacts = ({contacts}) => {
                                     color="var(--lightgrey)" 
                                     size={25} 
                                     style={{marginTop: '1.5rem', cursor: 'pointer'}}
-                                    onClick={() => handleClick(person)}
+                                    onClick={() => addPerson(person, person.id)}
                                 />
                             </div>
                         </div>
                     )
                 })}
-                <div>hello</div>
-                <List list={list}/>
             </div>
     )
 }
